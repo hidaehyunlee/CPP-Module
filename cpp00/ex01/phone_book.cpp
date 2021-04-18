@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 14:59:54 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/18 15:55:39 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/18 20:23:13 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,57 +25,58 @@ int PhoneBook::addContact(void)
         return (SUCCESS);
     }
     i = contactNum_++;
-    std::cout << "First Name : ";
+    std::cout << std::endl;
+    std::cout << "1. First Name : ";
     if (!(std::getline(std::cin, input)))
         return (ERROR);
     contact[i].setFirstName(input);
 
-    std::cout << "Last Name : ";
+    std::cout << "2. Last Name : ";
     if (!(std::getline(std::cin, input)))
         return (ERROR);
     contact[i].setLastName(input);
 
-    std::cout << "Nickname : ";
+    std::cout << "3. Nickname : ";
     if (!(std::getline(std::cin, input)))
         return (ERROR);
     contact[i].setNickname(input);
 
-    std::cout << "Login : ";
+    std::cout << "4. Login : ";
     if (!(std::getline(std::cin, input)))
         return (ERROR);
     contact[i].setLogin(input);
 
-    std::cout << "Postal Address : ";
+    std::cout << "5. Postal Address : ";
     if (!(std::getline(std::cin, input)))
         return (ERROR);
     contact[i].setPostalAddress(input);
 
-    std::cout << "Email Address : ";
+    std::cout << "6. Email Address : ";
     if (!(std::getline(std::cin, input)))
         return (ERROR);
     contact[i].setEmailAddress(input);
 
-    std::cout << "Phone Number : ";
+    std::cout << "7. Phone Number : ";
     if (!(std::getline(std::cin, input)))
         return (ERROR);
     contact[i].setPhoneNumber(input);
 
-    std::cout << "Birthday Date : ";
+    std::cout << "8. Birthday Date : ";
     if (!(std::getline(std::cin, input)))
         return (ERROR);
     contact[i].setBirthdayDate(input);
 
-    std::cout << "Favorite Meal : ";
+    std::cout << "9. Favorite Meal : ";
     if (!(std::getline(std::cin, input)))
         return (ERROR);
     contact[i].setFavoriteMeal(input);
 
-    std::cout << "Underwear Color : ";
+    std::cout << "10. Underwear Color : ";
     if (!(std::getline(std::cin, input)))
         return (ERROR);
     contact[i].setUnderwearColor(input);
 
-    std::cout << "Darkest Secret : ";
+    std::cout << "11. Darkest Secret : ";
     if (!(std::getline(std::cin, input)))
         return (ERROR);
     contact[i].setDarkestSecret(input);
@@ -83,25 +84,32 @@ int PhoneBook::addContact(void)
     return (SUCCESS);
 }
 
-int PhoneBook::searchContact(void) const
+int PhoneBook::searchContact(void)
 {
     int i;
     
     if (getContactNum() == 0)
+    {
         std::cout << "The PhoneBook is empty!" << std::endl;
+        return (ERROR);
+    }
     printAllContact();
-    std::cout << "Detail -> Select the index : " ;
+    std::cout << std::endl;
+    std::cout << "Select the index : " ;
     std::cin >> i;
     if (std::cin.eof())
         exit(1);
-    if (std::cin.fail() || 0 >= i || 8 < i)
+    if (std::cin.fail() || i <= 0 || i > 8)
     {
         std::cout << "wrong input!" << std::endl;
         std::cin.clear();
-        return (ERROR);
+        std::cin.ignore(MAX_INPUT_SIZE, '\n');
     }
     else
+    {
+        std::cin.ignore(MAX_INPUT_SIZE, '\n');
         PrintDetailContact(i);
+    }
     return (SUCCESS);
 }
 
@@ -118,6 +126,7 @@ std::string PhoneBook::cutLettersToTen(const std::string str) const
 
 void PhoneBook::printAllContact(void) const
 {
+    std::cout << std::endl;
     std::cout << "-------------------------------------------" << std::endl;
     std::cout << std::setw(10) << "index" << "|";
     std::cout << std::setw(10) << "first name" << "|";
@@ -131,6 +140,7 @@ void PhoneBook::printAllContact(void) const
         std::cout << std::setw(10) << cutLettersToTen(contact[i - 1].getFirstName()) << "|";
         std::cout << std::setw(10) << cutLettersToTen(contact[i - 1].getLastName()) << "|";
         std::cout << std::setw(10) << cutLettersToTen(contact[i - 1].getNickname()) << std::endl;
+        std::cout << "-------------------------------------------" << std::endl;
     }
 }
 
@@ -138,6 +148,8 @@ void PhoneBook::PrintDetailContact(const int i) const
 {
     Info info = contact[i - 1];
 
+    std::cout << std::endl;
+    std::cout << "-------------------------------------------" << std::endl;
     std::cout << "First Name : " << info.getFirstName() << std::endl;
     std::cout << "Last Name : " << info.getLastName() << std::endl;
     std::cout << "Nickname : " << info.getNickname() << std::endl;
@@ -149,4 +161,5 @@ void PhoneBook::PrintDetailContact(const int i) const
     std::cout << "Favorite Meal : " << info.getFavoriteMeal() << std::endl;
     std::cout << "Underwear Color : " << info.getUnderwearColor() << std::endl;
     std::cout << "Darkest Secret : " << info.getDarkestSecret() << std::endl;
+    std::cout << "-------------------------------------------" << std::endl;
 }

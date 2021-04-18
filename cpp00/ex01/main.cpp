@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 17:32:20 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/18 15:01:40 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/18 20:16:12 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main(void)
     printAsciiHeader();
     while (1)
     {
-        std::cout << "Enter A Command [ ADD | SEARCH | EXIT ] : ";
+        std::cout << std::endl << "Enter A Command [ ADD | SEARCH | EXIT ] : ";
 
         if (!(std::getline(std::cin, cmd)))
             exit(1);
@@ -48,10 +48,7 @@ int main(void)
                 exit(1);
         }
         else if (cmd.compare("SEARCH") == 0)
-        {
-            if (pb.searchContact() == ERROR)
-                exit(1);
-        }
+            pb.searchContact();
         else if (cmd.compare("EXIT") == 0)
         {
             std::cout << "Good Bye!" << std::endl;

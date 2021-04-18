@@ -8,6 +8,7 @@
 
 # define SUCCESS 1
 # define ERROR -1
+# define MAX_INPUT_SIZE 100
 
 class PhoneBook
 {
@@ -20,7 +21,7 @@ private:
 public:
     PhoneBook(void) : contactNum_(0){};
     int addContact(void);
-    int searchContact(void) const;
+    int searchContact(void);
     void printAllContact(void) const;
     void PrintDetailContact(const int i) const;
     int getContactNum(void) const;
