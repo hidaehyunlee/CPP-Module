@@ -6,11 +6,11 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 17:32:20 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/17 17:20:29 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/18 11:22:02 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phoneBook.hpp"
+#include "phone_book.hpp"
 
 void printAsciiHeader(void)
 {
@@ -31,7 +31,7 @@ void printAsciiHeader(void)
 int main(void)
 {
     std::string cmd;
-    phoneBook pb;
+    PhoneBook pb;
 
     printAsciiHeader();
     while (1)
@@ -43,9 +43,9 @@ int main(void)
         if (std::cin.eof())
             exit(1);
         if (cmd.compare("ADD") == 0)
-            pb.add();
+            pb.addContact();
         else if (cmd.compare("SEARCH") == 0)
-            pb.search();
+            pb.searchContact();
         else if (cmd.compare("EXIT") == 0)
         {
             std::cout << "Good Bye!" << std::endl;
