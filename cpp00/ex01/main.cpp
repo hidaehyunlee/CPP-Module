@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 17:32:20 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/18 11:22:02 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/18 15:01:40 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,15 @@ int main(void)
         if (std::cin.eof())
             exit(1);
         if (cmd.compare("ADD") == 0)
-            pb.addContact();
+        {
+            if (pb.addContact() == ERROR)
+                exit(1);
+        }
         else if (cmd.compare("SEARCH") == 0)
-            pb.searchContact();
+        {
+            if (pb.searchContact() == ERROR)
+                exit(1);
+        }
         else if (cmd.compare("EXIT") == 0)
         {
             std::cout << "Good Bye!" << std::endl;
