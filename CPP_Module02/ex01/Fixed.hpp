@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 01:31:37 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/22 17:02:33 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/23 15:50:23 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 class Fixed
 {
-    int raw_bits_;
-    const static int fractional_bits_ = 8;
+    int fixed_point_number;
+    const static int fractional_bits = 8;
 
 public:
     Fixed(void);
