@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 13:13:38 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/24 23:03:29 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/24 23:10:04 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int main(void)
 
 	std::cout << std::endl;
 	
-	ft.takeDamage(100);
+	ft.takeDamage(105);
 
 	std::cout << std::endl;
 
