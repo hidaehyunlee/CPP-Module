@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 13:13:24 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/24 22:06:21 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/24 23:02:24 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ FragTrap::FragTrap(void)
 	ranged_attack_damage = 20;
 	armor_damage_reduction = 5;
 
-	std::cout << "> 아이쿠! 클랩트랩을 선택할 뻔하셨습니다. 간 떨어질 뻔했네!일부러 고를리가 없을 테니까요!> 그렇죠?" << std::endl;
-	std::cout << "> 잠깐만요, 클랩트랩이 어떤 놈인지 알잖아요? 활기만 들어차서 정신은 하나도 없고 말만 많고> 진심이십니까?" << std::endl;
-	std::cout << "> 정말요? 클랩트랩을?! 괴상한 액션 스킬 이야기는 읽어보셨습니까? 정말로, 정말로 고르시겠다는 건가요?" << std::endl;
+	std::cout << "> 아이쿠! 클랩트랩을 선택할 뻔하셨습니다. 간 떨어질 뻔했네! 일부러 고를 리가 없을 테니까요!... 그렇죠?" << std::endl;
+	std::cout << "> 잠깐만요, 클랩트랩이 어떤 놈인지 알잖아요? 활기만 들어차서 정신은 하나도 없고 말만 많고... 진심이십니까?" << std::endl;
+	std::cout << "> 정말요? 클랩트랩을?! 괴상한 액션 스킬 이야기는 읽어 보셨습니까? 정말로, 정말로 고르시겠다는 건가요?" << std::endl;
 	std::cout << "FragTrap<" << name << "> 생성" << std::endl;
 }
 
@@ -37,10 +37,10 @@ FragTrap::FragTrap(const FragTrap& frag_trap)
 	srand(time(NULL));
 	
 	*this = frag_trap;
-	
-	std::cout << "> 아이쿠! 클랩트랩을 선택할 뻔하셨습니다. 간 떨어질 뻔했네!일부러 고를리가 없을 테니까요!> 그렇죠?" << std::endl;
-	std::cout << "> 잠깐만요, 클랩트랩이 어떤 놈인지 알잖아요? 활기만 들어차서 정신은 하나도 없고 말만 많고> 진심이십니까?" << std::endl;
-	std::cout << "> 정말요? 클랩트랩을?! 괴상한 액션 스킬 이야기는 읽어보셨습니까? 정말로, 정말로 고르시겠다는 건가요?" << std::endl;
+
+	std::cout << "> 아이쿠! 클랩트랩을 선택할 뻔하셨습니다. 간 떨어질 뻔했네! 일부러 고를 리가 없을 테니까요!... 그렇죠?" << std::endl;
+	std::cout << "> 잠깐만요, 클랩트랩이 어떤 놈인지 알잖아요? 활기만 들어차서 정신은 하나도 없고 말만 많고... 진심이십니까?" << std::endl;
+	std::cout << "> 정말요? 클랩트랩을?! 괴상한 액션 스킬 이야기는 읽어 보셨습니까? 정말로, 정말로 고르시겠다는 건가요?" << std::endl;
 	std::cout << "FragTrap<" << name << "> 생성" << std::endl;
 }
 
@@ -58,9 +58,9 @@ FragTrap::FragTrap(const std::string& _name)
 	ranged_attack_damage = 20;
 	armor_damage_reduction = 5;
 
-	std::cout << "> 아이쿠! 클랩트랩을 선택할 뻔하셨습니다. 간 떨어질 뻔했네!일부러 고를리가 없을 테니까요!... 그렇죠?" << std::endl;
+	std::cout << "> 아이쿠! 클랩트랩을 선택할 뻔하셨습니다. 간 떨어질 뻔했네! 일부러 고를 리가 없을 테니까요!... 그렇죠?" << std::endl;
 	std::cout << "> 잠깐만요, 클랩트랩이 어떤 놈인지 알잖아요? 활기만 들어차서 정신은 하나도 없고 말만 많고... 진심이십니까?" << std::endl;
-	std::cout << "> 정말요? 클랩트랩을?! 괴상한 액션 스킬 이야기는 읽어보셨습니까? 정말로, 정말로 고르시겠다는 건가요?" << std::endl;
+	std::cout << "> 정말요? 클랩트랩을?! 괴상한 액션 스킬 이야기는 읽어 보셨습니까? 정말로, 정말로 고르시겠다는 건가요?" << std::endl;
 	std::cout << "> FragTrap<" << name << ">(이)가 생성되었다!" << std::endl;
 }
 
@@ -141,7 +141,7 @@ void		FragTrap::vaulthunter_dot_exe(std::string const & target)
 	{
 		energy_points -= 25;
 		int skill_num = rand() % 5;
-		std::cout << skill_call[skill_num] << " FragTrap<" << name << ">(이)가 <" << target << ">에게 >" << skill_name[skill_num] << "> 스킬을 사용했다! 적은 <" << damages[skill_num] << ">의 데미지를 입었다!" << std::endl;
+		std::cout << skill_call[skill_num] << " FragTrap<" << name << ">(이)가 <" << target << ">에게 <" << skill_name[skill_num] << "> 스킬을 사용했다! 적은 <" << damages[skill_num] << ">의 데미지를 입었다!" << std::endl;
 	}
 
 	std::cout << "[ HP: " << hit_points << " | EP: " << energy_points << " ]" << std::endl;

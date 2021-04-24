@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 13:13:38 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/24 21:57:40 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/24 23:03:29 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main(void)
 
 	std::cout << std::endl;
 
-	ft.rangedAttack("스카브");
+	ft.rangedAttack("스캐빈저");
 	ft.meleeAttack("루나틱");
 
 	std::cout << std::endl;
@@ -48,6 +48,10 @@ int main(void)
 
 	ft.beRepaired(30);
 	ft.beRepaired(90);
+
+	std::cout << std::endl;
+	
+	ft.takeDamage(100);
 
 	std::cout << std::endl;
 
