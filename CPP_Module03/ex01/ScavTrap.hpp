@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 23:31:48 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/25 00:37:37 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/25 09:50:03 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ public:
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 
-    void challengeNewcomer(std::string const &target);
+    void challengeNewcomer(void);
 };
 
 #endif

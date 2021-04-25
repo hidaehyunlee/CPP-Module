@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 23:31:50 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/25 09:29:35 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/25 10:05:39 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ ScavTrap::ScavTrap(void)
     ranged_attack_damage = 15;
     armor_damage_reduction = 3;
 
-    std::cout << "> ScavTrap: \"Look out, everybody, things are about to get awesome!\"" << std::endl;
-    std::cout << "ScavTrap<" << name << "> 생성" << std::endl;
+    std::cout << "> \"Look out, everybody, things are about to get awesome!\"" << " ScavTrap<" << name << ">(이)가 생성되었다!" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &scav_trap)
@@ -36,8 +35,7 @@ ScavTrap::ScavTrap(const ScavTrap &scav_trap)
 
     *this = scav_trap;
 
-    std::cout << "> ScavTrap: \"Look out, everybody, things are about to get awesome!\"" << std::endl;
-    std::cout << "ScavTrap<" << name << "> 생성" << std::endl;
+    std::cout << "> \"Look out, everybody, things are about to get awesome!\"" << " ScavTrap<" << name << ">(이)가 생성되었다!" << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string &_name)
@@ -54,13 +52,12 @@ ScavTrap::ScavTrap(const std::string &_name)
     ranged_attack_damage = 15;
     armor_damage_reduction = 3;
 
-    std::cout << "> ScavTrap: \"Look out, everybody, things are about to get awesome!\"" << std::endl;
-    std::cout << "> ScavTrap<" << name << ">(이)가 생성되었다!" << std::endl;
+    std::cout << "> \"Look out, everybody, things are about to get awesome!\"" << " ScavTrap<" << name << ">(이)가 생성되었다!" << std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "> 클랩트랩의 꿈이 또 한번 산산조각이 났군요. 하!" << std::endl;
+    std::cout << "> ScavTrap<" << name << ">: \"클랩트랩의 꿈이 또 한번 산산조각이 났군요. 하!\"" << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &scav_trap)
@@ -82,14 +79,12 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &scav_trap)
 
 void ScavTrap::rangedAttack(std::string const &target)
 {
-    std::cout << "> ScavTrap<" << name << ">(이)가 <" << target << ">을(를) 원거리에서 공격했다! 적은 <" << ranged_attack_damage << ">의 데미지를 입었다!" << std::endl;
-    std::cout << "> ScavTrap<" << name << ">: \"Wow! You're not dead?\"" << std::endl;
+    std::cout << "> \"오우! 아직 살아있네?\"" << " ScavTrap<" << name << ">(이)가 <" << target << ">을(를) 원거리에서 공격했다! 적은 <" << ranged_attack_damage << ">의 데미지를 입었다!" << std::endl;
 }
 
 void ScavTrap::meleeAttack(std::string const &target)
 {
-    std::cout << "> ScavTrap<" << name << ">(이)가 <" << target << ">을(를) 근거리에서 공격했다! 적은 <" << melee_attack_damage << ">의 데미지를 입었다!" << std::endl;
-    std::cout << "> ScavTrap<" << name << ">: \"Wow! You're not dead?\"" << std::endl;
+    std::cout << "> \"오우! 아직 살아있네?\"" << " ScavTrap<" << name << ">(이)가 <" << target << ">을(를) 근거리에서 공격했다! 적은 <" << ranged_attack_damage << ">의 데미지를 입었다!" << std::endl;
 }
 
 void ScavTrap::takeDamage(unsigned int amount)
@@ -98,20 +93,18 @@ void ScavTrap::takeDamage(unsigned int amount)
         amount = 0;
     else
         amount -= armor_damage_reduction;
-    std::cout << "> ScavTrap<" << name << ">(이)가 <" << amount << ">만큼 공격받았다!" << std::endl;
-    std::cout << "> ScavTrap<" << name << ">: \"Oh my God, I'm leaking! I think I'm leaking! Ahhhh, I'm leaking! There's oil everywhere!\"" << std::endl;
+    std::cout << "> \"세상에, 기름 샌다! 새고 있는 것 같아! 아ㅏㅏ, 내가 새고 있어! 온사방이 기름 천지야!\"" << " ScavTrap<" << name << ">(이)가 <" << amount << ">만큼 공격받았다!" << std::endl;
 
     if (hit_points <= amount)
         hit_points = 0;
     else
         hit_points -= amount;
-    std::cout << "[ HP: " << hit_points << " | EP: " << energy_points << " ]" << std::endl;
+    std::cout << "[ " << "ScavTrap<" << name << "> | HP: " << hit_points << " | EP: " << energy_points << " ]" << std::endl;
 }
 
 void ScavTrap::beRepaired(unsigned int amount)
 {
-    std::cout << "> ScavTrap<" << name << ">(이)가 HP와 EP를 <" << amount << ">만큼 회복했다!" << std::endl;
-    std::cout << "> ScavTrap<" << name << ">: \"Good as new, I think. Am I leaking ?\"" << std::endl;
+    std::cout << "> \"새 것 처럼 좋아진 기분인데. 나 아직도 새고있어?\"" << " ScavTrap<" << name << ">(이)가 HP와 EP를 <" << amount << ">만큼 회복했다!" << std::endl;
 
     hit_points += amount;
     energy_points += amount;
@@ -120,10 +113,10 @@ void ScavTrap::beRepaired(unsigned int amount)
     if (max_energy_points < energy_points)
         energy_points = max_energy_points;
 
-    std::cout << "[ HP: " << hit_points << " | EP: " << energy_points << " ]" << std::endl;
+    std::cout << "[ " << "ScavTrap<" << name << "> | HP: " << hit_points << " | EP: " << energy_points << " ]" << std::endl;
 }
 
-void ScavTrap::challengeNewcomer(std::string const &target)
+void ScavTrap::challengeNewcomer(void)
 {
     std::string challenges[5] = {"외바퀴로 계단 오르기!", "애완동물 알레르기 견디기!", "댄스 프로토콜 실행하기!", "문 열기!", "항성간 닌자 암살자 클랩트랩으로 진화하기"};
 
