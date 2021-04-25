@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 23:31:50 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/25 00:55:38 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/25 09:29:35 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,4 +121,12 @@ void ScavTrap::beRepaired(unsigned int amount)
         energy_points = max_energy_points;
 
     std::cout << "[ HP: " << hit_points << " | EP: " << energy_points << " ]" << std::endl;
+}
+
+void ScavTrap::challengeNewcomer(std::string const &target)
+{
+    std::string challenges[5] = {"외바퀴로 계단 오르기!", "애완동물 알레르기 견디기!", "댄스 프로토콜 실행하기!", "문 열기!", "항성간 닌자 암살자 클랩트랩으로 진화하기"};
+
+    int challenge_num = rand() % 5;
+    std::cout << "> ScavTrap<" << name << ">: \"도전! " << challenges[challenge_num] << "\"" << std::endl;
 }
