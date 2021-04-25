@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 13:13:24 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/25 10:00:53 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/25 10:07:41 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ FragTrap::FragTrap(void)
 	ranged_attack_damage = 20;
 	armor_damage_reduction = 5;
 
-	std::cout << "> 핸섬 잭: \"네 새로운 형식명은 FR4G-TP. 프랙트랩이다. 너는 이제부터 무자비한 살인 기계야. 알아들었어?\"" << std::endl;
-	std::cout << "FragTrap<" << name << "> 생성" << std::endl;
+	std::cout << "> \"네 새로운 형식명은 FR4G-TP. 프랙트랩이다. 너는 이제부터 무자비한 살인 기계야. 알아들었어?\"" << " FragTrap<" << name << ">(이)가 생성되었다!" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap& frag_trap)
@@ -36,8 +35,7 @@ FragTrap::FragTrap(const FragTrap& frag_trap)
 	
 	*this = frag_trap;
 
-	std::cout << "> 핸섬 잭: \"네 새로운 형식명은 FR4G-TP. 프랙트랩이다. 너는 이제부터 무자비한 살인 기계야. 알아들었어?\"" << std::endl;
-	std::cout << "FragTrap<" << name << "> 생성" << std::endl;
+	std::cout << "> \"네 새로운 형식명은 FR4G-TP. 프랙트랩이다. 너는 이제부터 무자비한 살인 기계야. 알아들었어?\"" << " FragTrap<" << name << ">(이)가 생성되었다!" << std::endl;
 }
 
 FragTrap::FragTrap(const std::string& _name)
@@ -54,8 +52,7 @@ FragTrap::FragTrap(const std::string& _name)
 	ranged_attack_damage = 20;
 	armor_damage_reduction = 5;
 
-	std::cout << "> 핸섬 잭: \"네 새로운 형식명은 FR4G-TP. 프랙트랩이다. 너는 이제부터 무자비한 살인 기계야. 알아들었어?\"" << std::endl;
-	std::cout << "> FragTrap<" << name << ">(이)가 생성되었다!" << std::endl;
+	std::cout << "> \"네 새로운 형식명은 FR4G-TP. 프랙트랩이다. 너는 이제부터 무자비한 살인 기계야. 알아들었어?\"" << " FragTrap<" << name << ">(이)가 생성되었다!" << std::endl;
 }
 
 FragTrap::~FragTrap()
