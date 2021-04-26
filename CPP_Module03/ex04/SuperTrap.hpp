@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 16:32:07 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 16:32:43 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 16:50:29 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include "FragTrap.hpp"
 #include "NinjaTrap.hpp"
 
-class SuperTrap : public FragTrap, public NinjaTrap
+class SuperTrap : virtual public FragTrap, virtual public NinjaTrap
 {
 public:
 	SuperTrap(void);
