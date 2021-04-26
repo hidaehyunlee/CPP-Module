@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 12:28:33 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 14:00:01 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 17:56:30 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ NinjaTrap::NinjaTrap(const std::string &_name) : ClapTrap(_name)
 
 NinjaTrap::~NinjaTrap()
 {
-    std::cout << "> NinjaTrap<" << name << ">: \"Please don't shoot me, please don't shoot me, please don't shoot me!\"" << std::endl;
+    std::cout << "> " << getType() << "<" << getName() << ">: \"Please don't shoot me, please don't shoot me, please don't shoot me!\"" << std::endl;
 }
 
 NinjaTrap &NinjaTrap::operator=(const NinjaTrap &ninja_trap)
