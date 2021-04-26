@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 23:31:50 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/25 14:49:33 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 12:39:14 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &scav_trap)
     melee_attack_damage = scav_trap.melee_attack_damage;
     ranged_attack_damage = scav_trap.ranged_attack_damage;
     armor_damage_reduction = scav_trap.armor_damage_reduction;
+    type = scav_trap.type;
 
     return *this;
 }
