@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 23:31:50 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 12:39:14 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 17:57:01 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ ScavTrap::ScavTrap(const std::string &_name) : ClapTrap(_name)
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "> ScavTrap<" << name << ">: \"I can see... the code...\"" << std::endl;
+    std::cout << "> " << getType() << "<" << getName() << ">: \"I can see... the code...\"" << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &scav_trap)

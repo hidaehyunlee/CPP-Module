@@ -6,13 +6,13 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 16:31:51 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 17:14:26 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 18:07:02 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "SuperTrap.hpp"
 
-SuperTrap::SuperTrap(void) : ClapTrap(), FragTrap(), NinjaTrap()
+SuperTrap::SuperTrap(void) : FragTrap(), NinjaTrap()
 {
     srand(time(NULL));
 
@@ -39,7 +39,7 @@ SuperTrap::SuperTrap(const SuperTrap &super_trap)
     std::cout << "> \"I am the best robot. Yeah, yeah, yeah, I am the best robot. Ooh, ooh, here we go!\"" << " SuperTrap<" << name << ">(이)가 생성되었다!" << std::endl;
 }
 
-SuperTrap::SuperTrap(const std::string &_name) : ClapTrap(_name), FragTrap(), NinjaTrap()
+SuperTrap::SuperTrap(const std::string &_name) : FragTrap(), NinjaTrap()
 {
     srand(time(NULL));
 
@@ -48,7 +48,7 @@ SuperTrap::SuperTrap(const std::string &_name) : ClapTrap(_name), FragTrap(), Ni
     energy_points = 120;
     max_energy_points = 120;
     level = 1;
-    name = "SP4V-TP";
+    name = _name;
     melee_attack_damage = 60;
     ranged_attack_damage = 20;
     armor_damage_reduction = 5;
@@ -59,7 +59,7 @@ SuperTrap::SuperTrap(const std::string &_name) : ClapTrap(_name), FragTrap(), Ni
 
 SuperTrap::~SuperTrap()
 {
-    std::cout << "> SuperTrap<" << name << ">: \"움직일 수가 없어! 공포로 몸이 마비됐어요!\"" << std::endl;
+    std::cout << "> " << getType() << "<" << getName() << ">: \"움직일 수가 없어! 공포로 몸이 마비됐어요!\"" << std::endl;
 }
 
 SuperTrap &SuperTrap::operator=(const SuperTrap &super_trap)

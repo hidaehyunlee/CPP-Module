@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 13:13:38 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 17:12:10 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 17:47:47 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ int main(void)
 
 	std::cout << std::endl;
 
-	super_trap.vaulthunter_dot_exe("target");
-	super_trap.vaulthunter_dot_exe("target");
+	super_trap.vaulthunter_dot_exe("robot3");
+	super_trap.vaulthunter_dot_exe("robot4");
 
 	std::cout << std::endl;
 
