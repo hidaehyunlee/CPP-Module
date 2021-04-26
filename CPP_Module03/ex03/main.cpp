@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 13:13:38 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 13:32:00 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 21:28:43 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ int main(void)
 
 	std::cout << std::endl;
 
-	nt.ninjaShoebox(ft);
-	std::cout << std::endl;
 	nt.ninjaShoebox(st);
 	std::cout << std::endl;
 	nt.ninjaShoebox(nt);
+	std::cout << std::endl;
+	nt.ninjaShoebox(ft);
 
 	std::cout << std::endl;
 

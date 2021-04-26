@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 12:28:33 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 17:56:30 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 21:32:45 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,24 +82,24 @@ NinjaTrap &NinjaTrap::operator=(const NinjaTrap &ninja_trap)
 
 void NinjaTrap::ninjaShoebox(ClapTrap &target)
 {
-    std::cout << "> \"휘익...\" " << type << "<" << name << ">(이)가 " << target.getType() << "<" << target.getName() << ">(을)를 공격했다!" << std::endl;
+    std::cout << "> \"I'm over here!\" " << type << "<" << name << ">(이)가 " << target.getType() << "<" << target.getName() << ">(을)를 공격했다!" << std::endl;
     target.takeDamage(60);
 }
 
 void NinjaTrap::ninjaShoebox(FragTrap &target)
 {
-    std::cout << "> \"휘익...\" " << type << "<" << name << ">(이)가 " << target.getType() << "<" << target.getName() << ">(을)를 공격했다!" << std::endl;
+    std::cout << "> \"Yoo hoooooooooo!\" " << type << "<" << name << ">(이)가 " << target.getType() << "<" << target.getName() << ">(을)를 공격했다!" << std::endl;
     target.takeDamage(60);
 }
 
 void NinjaTrap::ninjaShoebox(ScavTrap &target)
 {
-    std::cout << "> \"휘익...\" " << type << "<" << name << ">(이)가 " << target.getType() << "<" << target.getName() << ">(을)를 공격했다!" << std::endl;
-    target.takeDamage(60);
+    std::cout << "> " << type << "<" << name << ">: " << "\"Wanna hear a new dubstep song I wrote? Wub! Wub!\"" << std::endl;
+    std::cout << "> " << target.getType() << "<" << target.getName() << ">: " << "\"Unce! Unce! I think I lost the beat... but, Unce! Unce!\"" << std::endl;
+    std::cout << "[ Beatbox Point: 100 ]" << std::endl;
 }
 
 void NinjaTrap::ninjaShoebox(NinjaTrap &target)
 {
-    std::cout << "> \"휘익...\" " << type << "<" << name << ">(이)가 " << target.getType() << "<" << target.getName() << ">(을)를 공격했다!" << std::endl;
-    target.takeDamage(60);
+    std::cout << "> \"Follow me!\" " << type << "<" << name << ">(이)가 " << target.getType() << "<닌자2>(와)과 함께 기습 공격을 준비한다!" << std::endl;
 }
