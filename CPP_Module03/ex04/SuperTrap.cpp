@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 16:31:51 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 18:07:02 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 22:02:47 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ SuperTrap::SuperTrap(const std::string &_name) : FragTrap(), NinjaTrap()
 
 SuperTrap::~SuperTrap()
 {
-    std::cout << "> " << getType() << "<" << getName() << ">: \"움직일 수가 없어! 공포로 몸이 마비됐어요!\"" << std::endl;
+    std::cout << "> \"움직일 수가 없어! 공포로 몸이 마비됐어요!\" (SuperTrap 소멸자)" << std::endl;
 }
 
 SuperTrap &SuperTrap::operator=(const SuperTrap &super_trap)

@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 13:13:24 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 17:51:05 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 22:00:50 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ FragTrap::FragTrap(const std::string &_name) : ClapTrap(_name)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "> " << getType() << "<" << getName() << ">: \"Sure is lonely around here.\"" << std::endl;
+	std::cout << "> \"Sure is lonely around here.\" (FragTrap 소멸자)" << std::endl;
 }
 
 FragTrap&	FragTrap::operator=(const FragTrap& frag_trap)

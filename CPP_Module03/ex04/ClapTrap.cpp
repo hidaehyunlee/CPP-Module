@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 13:32:02 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 21:46:34 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 22:02:59 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ ClapTrap::ClapTrap(const std::string &_name)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "[ 클랩트랩의 꿈이 또 한번 산산조각이 났군요. 하! ]" << std::endl;
+    std::cout << "[ 클랩트랩의 꿈이 또 한번 산산조각이 났군요. 하! ] (ClapTrap 소멸자)" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &clap_trap)
