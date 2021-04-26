@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 12:28:33 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 12:58:57 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 14:00:01 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,28 @@ NinjaTrap &NinjaTrap::operator=(const NinjaTrap &ninja_trap)
     type = ninja_trap.type;
 
     return *this;
+}
+
+void NinjaTrap::ninjaShoebox(ClapTrap &target)
+{
+    std::cout << "> \"휘익...\" " << type << "<" << name << ">(이)가 " << target.getType() << "<" << target.getName() << ">(을)를 공격했다!" << std::endl;
+    target.takeDamage(60);
+}
+
+void NinjaTrap::ninjaShoebox(FragTrap &target)
+{
+    std::cout << "> \"휘익...\" " << type << "<" << name << ">(이)가 " << target.getType() << "<" << target.getName() << ">(을)를 공격했다!" << std::endl;
+    target.takeDamage(60);
+}
+
+void NinjaTrap::ninjaShoebox(ScavTrap &target)
+{
+    std::cout << "> \"휘익...\" " << type << "<" << name << ">(이)가 " << target.getType() << "<" << target.getName() << ">(을)를 공격했다!" << std::endl;
+    target.takeDamage(60);
+}
+
+void NinjaTrap::ninjaShoebox(NinjaTrap &target)
+{
+    std::cout << "> \"휘익...\" " << type << "<" << name << ">(이)가 " << target.getType() << "<" << target.getName() << ">(을)를 공격했다!" << std::endl;
+    target.takeDamage(60);
 }

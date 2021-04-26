@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 13:32:02 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 12:59:28 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 14:01:26 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,8 +105,7 @@ void ClapTrap::takeDamage(unsigned int amount)
         hit_points = 0;
     else
         hit_points -= amount;
-    std::cout << "[ "
-              << type << "<" << name << "> | HP: " << hit_points << " | EP: " << energy_points << " ]" << std::endl;
+    showStatus();
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
@@ -120,9 +119,7 @@ void ClapTrap::beRepaired(unsigned int amount)
         hit_points = max_hit_points;
     if (max_energy_points < energy_points)
         energy_points = max_energy_points;
-
-    std::cout << "[ "
-              << type << "<" << name << "> | HP: " << hit_points << " | EP: " << energy_points << " ]" << std::endl;
+    showStatus();
 }
 
 std::string ClapTrap::getName(void) const
@@ -133,4 +130,9 @@ std::string ClapTrap::getName(void) const
 std::string ClapTrap::getType(void) const
 {
     return type;
+}
+
+void ClapTrap::showStatus(void) const
+{
+    std::cout << "[ " << type << "<" << name << "> | HP: " << hit_points << " | EP: " << energy_points << " ]" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 13:32:11 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 12:59:55 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 13:54:06 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ public:
 
     std::string getName(void) const;
     std::string getType(void) const;
+    void        showStatus(void) const;
 };
 
 #endif
