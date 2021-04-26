@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 13:32:02 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 12:44:39 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 21:57:59 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ ClapTrap::ClapTrap(void)
     armor_damage_reduction = 10;
     type = "ClapTrap";
 
-    std::cout << "> \"부팅 절차 완료. 안녕하십니까! 저는 당신의 새 집사 봇입니다. 형식명: 하이페리온 로봇, C 등급, CL4P-TP. 사용 이전에 필요에 따라 초기화 셋팅을 조절하여 주십시오.\"" << std::endl;
+    std::cout << "[ 부팅 절차 완료. 형식명: 하이페리온 로봇, C 등급, CL4P-TP. 사용 이전에 필요에 따라 초기화 셋팅을 조절하여 주십시오. ]" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &clap_trap)
@@ -36,7 +36,7 @@ ClapTrap::ClapTrap(const ClapTrap &clap_trap)
 
     *this = clap_trap;
 
-    std::cout << "> \"부팅 절차 완료. 안녕하십니까! 저는 당신의 새 집사 봇입니다. 형식명: 하이페리온 로봇, C 등급, CL4P-TP. 사용 이전에 필요에 따라 초기화 셋팅을 조절하여 주십시오.\"" << std::endl;
+    std::cout << "[ 부팅 절차 완료. 형식명: 하이페리온 로봇, C 등급, CL4P-TP. 사용 이전에 필요에 따라 초기화 셋팅을 조절하여 주십시오. ]" << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string &_name)
