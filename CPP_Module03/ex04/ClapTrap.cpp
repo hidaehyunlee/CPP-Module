@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 13:32:02 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 14:01:26 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 21:46:34 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void ClapTrap::rangedAttack(std::string const &target)
 void ClapTrap::meleeAttack(std::string const &target)
 {
     std::cout << "> \"오우! 아직 살아있네?\" "
-              << type << "<" << name << ">(이)가 <" << target << ">을(를) 근거리에서 공격했다! 적은 <" << ranged_attack_damage << ">의 데미지를 입었다!" << std::endl;
+              << type << "<" << name << ">(이)가 <" << target << ">을(를) 근거리에서 공격했다! 적은 <" << melee_attack_damage << ">의 데미지를 입었다!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
