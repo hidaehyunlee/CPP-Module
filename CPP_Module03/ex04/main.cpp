@@ -6,31 +6,43 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 13:13:38 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 13:32:00 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 17:12:10 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
-#include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 
 int main(void)
 {
 	FragTrap ft("프랙");
-	ScavTrap st("스카브");
-	
-	std::cout << std::endl;
-	
 	NinjaTrap nt("닌자");
 
 	std::cout << std::endl;
 
-	nt.ninjaShoebox(ft);
+	SuperTrap super_trap("슈퍼");
+
 	std::cout << std::endl;
-	nt.ninjaShoebox(st);
+
+	super_trap.meleeAttack("robot1");
+	super_trap.rangedAttack("robot2");
+
 	std::cout << std::endl;
-	nt.ninjaShoebox(nt);
+
+	super_trap.takeDamage(120);
+
+	std::cout << std::endl;
+
+	super_trap.beRepaired(50);
+
+	std::cout << std::endl;
+
+	super_trap.vaulthunter_dot_exe("target");
+	super_trap.vaulthunter_dot_exe("target");
+
+	std::cout << std::endl;
+
+	super_trap.ninjaShoebox(ft);
+	super_trap.ninjaShoebox(nt);
 
 	std::cout << std::endl;
 
