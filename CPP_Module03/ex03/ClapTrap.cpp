@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 13:32:02 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 12:44:39 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 12:59:28 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,4 +123,14 @@ void ClapTrap::beRepaired(unsigned int amount)
 
     std::cout << "[ "
               << type << "<" << name << "> | HP: " << hit_points << " | EP: " << energy_points << " ]" << std::endl;
+}
+
+std::string ClapTrap::getName(void) const
+{
+    return name;
+}
+
+std::string ClapTrap::getType(void) const
+{
+    return type;
 }

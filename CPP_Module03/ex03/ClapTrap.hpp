@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 13:32:11 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/25 14:10:28 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 12:59:55 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ public:
     void meleeAttack(std::string const &target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
+
+    std::string getName(void) const;
+    std::string getType(void) const;
 };
 
 #endif
