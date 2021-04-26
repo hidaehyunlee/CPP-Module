@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 13:13:24 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/26 12:44:57 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 17:28:13 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,14 +88,13 @@ void		FragTrap::vaulthunter_dot_exe(std::string const & target)
 
 	if (energy_points < 25)
 	{
-		std::cout << "> FragTrap<" << name << ">(은)는 EP가 부족해 스킬을 사용할 수 없다!" << std::endl;
+		std::cout << "> " << getType() << "<" << getName() << ">(은)는 EP가 부족해 스킬을 사용할 수 없다!" << std::endl;
 	}
 	else
 	{
 		energy_points -= 25;
 		int skill_num = rand() % 5;
-		std::cout << skill_call[skill_num] << " FragTrap<" << name << ">(이)가 <" << target << ">에게 <" << skill_name[skill_num] << "> 스킬을 사용했다! 적은 <" << damages[skill_num] << ">의 데미지를 입었다!" << std::endl;
+		std::cout << skill_call[skill_num] << " " << getType() << "<" << getName() << ">(이)가 <" << target << ">에게 <" << skill_name[skill_num] << "> 스킬을 사용했다! 적은 <" << damages[skill_num] << ">의 데미지를 입었다!" << std::endl;
 	}
-
-	std::cout << "[ "<< "FragTrap<" << name  << "> | HP: " << hit_points << " | EP: " << energy_points << " ]" << std::endl;
+	showStatus();
 }
