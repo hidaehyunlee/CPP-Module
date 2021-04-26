@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 13:13:24 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/25 14:40:40 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 12:44:57 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,8 @@ FragTrap&	FragTrap::operator=(const FragTrap& frag_trap)
 	melee_attack_damage = frag_trap.melee_attack_damage;
 	ranged_attack_damage = frag_trap.ranged_attack_damage;
 	armor_damage_reduction = frag_trap.armor_damage_reduction;
-	
+	type = frag_trap.type;
+
 	return *this;
 }
 

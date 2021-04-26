@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 13:32:02 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/25 14:34:45 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/26 12:44:39 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &clap_trap)
     melee_attack_damage = clap_trap.melee_attack_damage;
     ranged_attack_damage = clap_trap.ranged_attack_damage;
     armor_damage_reduction = clap_trap.armor_damage_reduction;
+    type = clap_trap.type;
 
     return *this;
 }
