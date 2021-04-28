@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 00:23:03 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/29 02:27:07 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/29 03:10:05 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 class Squad : public ISquad
 {
+private:
 	int count;
 	ISpaceMarine** units;
 
