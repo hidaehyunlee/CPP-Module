@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 03:02:45 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/29 03:51:00 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/29 11:19:59 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,7 @@ Character::~Character()
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (inventory[i] != NULL)
-			delete inventory[i];
+		delete inventory[i];
 	}
 }
 

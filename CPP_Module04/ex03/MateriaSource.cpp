@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 03:03:36 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/29 03:51:25 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/29 11:20:09 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ MateriaSource::~MateriaSource()
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (inventory[i] != NULL)
-			delete inventory[i];
+		delete inventory[i];
 	}
 }
 
