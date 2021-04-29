@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 15:50:48 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/29 17:50:37 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/29 19:03:05 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ public:
 	void decreaseGrade(void);
 
 	void signForm(Form &form) const;
+	void executeForm(Form &form) const;
 
 	class GradeTooHighException : public std::exception
 	{

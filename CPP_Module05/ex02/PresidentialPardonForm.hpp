@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 18:24:08 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/29 18:24:09 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/29 19:00:35 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 
 	PresidentialPardonForm& operator=(const PresidentialPardonForm& other);
 
-	void action(void) const;
+	virtual void action(void) const;
 };
 
 #endif

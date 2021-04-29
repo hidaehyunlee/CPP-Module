@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 17:16:39 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/29 17:52:22 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/29 18:58:42 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,19 @@ void		Form::beSigned(const Bureaucrat& bureaucrat)
 	isSigned_ = true;
 }
 
+void Form::execute(Bureaucrat const &executor) const
+{
+	if (isSigned_ == false)
+	{
+		throw Form::NotSignedException();
+	}
+	if (executor.getGrade() > executeGrade_)
+	{
+		throw Form::GradeTooLowException();
+	}
+	action();
+}
+
 const char* Form::GradeTooHighException::what() const throw()
 {
 	return "GradeTooHighException : Grade too height!";
@@ -68,6 +81,11 @@ const char* Form::GradeTooHighException::what() const throw()
 const char* Form::GradeTooLowException::what() const throw()
 {
 	return "GradeTooLowException : Grade too low!";
+}
+
+const char *Form::NotSignedException::what() const throw()
+{
+	return "NotSignedException : Not Signed!";
 }
 
 std::ostream& operator<<(std::ostream& os , const Form& form)

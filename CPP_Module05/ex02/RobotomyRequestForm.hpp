@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 18:24:15 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/29 18:25:01 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/29 19:00:39 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 
 	RobotomyRequestForm& operator=(const RobotomyRequestForm& other);
 
-	void action(void) const;
+	virtual void action(void) const;
 };
 
 #endif

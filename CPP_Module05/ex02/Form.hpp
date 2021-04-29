@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 17:16:43 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/29 17:33:45 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/29 19:02:09 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,9 @@ public:
 	int			getExecuteGrade(void) const;
 	void		beSigned(const Bureaucrat& bureaucrat);
 
+	virtual void execute(Bureaucrat const &executor) const; // action 실행
+	virtual void action(void) const = 0; // 순수 가상함수
+
 	class GradeTooHighException : public std::exception
 	{
 	public:
@@ -51,6 +54,12 @@ public:
 	{
 	public:
 		virtual const char* what() const throw();
+	};
+
+	class NotSignedException : public std::exception
+	{
+	public:
+		virtual const char *what() const throw();
 	};
 };
 
