@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 15:50:53 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/29 21:41:14 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/29 23:12:37 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main(void)
 
 	std::cout << std::endl;
 	
-	RobotomyRequestForm rr("dog"); // sign(72), exec(45)
+	RobotomyRequestForm rr("cat"); // sign(72), exec(45)
 	Bureaucrat B("B", 60);
 	B.signForm(rr);
 	B.executeForm(rr);

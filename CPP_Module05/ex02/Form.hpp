@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 17:16:43 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/29 19:02:09 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/29 23:16:38 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ public:
 	Form(void);
 	Form(const Form& other);
 	Form(std::string name, int signGrade, int executeGrade);
-	~Form();
+	virtual ~Form();
 
 	Form& operator=(const Form& other);
 
