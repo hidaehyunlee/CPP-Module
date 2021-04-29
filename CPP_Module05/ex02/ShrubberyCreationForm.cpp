@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 18:24:32 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/29 19:04:05 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/29 19:10:19 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,18 @@ void ShrubberyCreationForm::action(void) const
 {
 	std::ofstream out(target_ + "_shrubbery");
 
-	// 아스키 그림
+	out << "	     *         " << std::endl;         
+	out << "        /|\\        " << std::endl;                         
+	out << "       /*|O\\       " << std::endl;         
+	out << "      /*/|\\*\\      " << std::endl; 
+	out << "     /X/O|*\\X\\     " << std::endl; 
+	out << "    /*/X/|\\X\\*\\    " << std::endl; 
+	out << "   /O/*/X|*\\O\\X\\   " << std::endl;            
+	out << "  /*/O/X/|\\X\\O\\*\\  " << std::endl; 
+	out << " /X/O/*/X|O\\X\\*\\O\\ " << std::endl; 
+	out << "/O/X/*/O/|\\X\\*\\O\\X\\" << std::endl; 
+	out << "        |X|        " << std::endl; 
+	out << "        |X|        " << std::endl;   
 
 	out.close();
 }
