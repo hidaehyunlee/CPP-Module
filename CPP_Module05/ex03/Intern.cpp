@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 21:53:26 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/29 23:07:29 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/30 09:57:32 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,36 +28,28 @@ Intern& Intern::operator=(const Intern& other)
 
 Form *Intern::makeForm(const std::string formName, const std::string target) const
 {
-	typedef Form *(Intern::*t_form_maker)(std::string target) const;
+	std::string targets[3] = {"shrubbery_creation", "robotomy_request", "presidential_pardon"};
 
-	std::string formNames[3] = {"shrubbery_creation", "robotomy_request", "presidential_pardon"};
-	t_form_maker formMakers[3] = {&Intern::makeShrubberyCreationForm, &Intern::makeRobotomyRequestForm, &Intern::makePresidentialPardonForm};
+	Form *forms[3];
+	forms[0] = new ShrubberyCreationForm(target);
+	forms[1] = new RobotomyRequestForm(target);
+	forms[2] = new PresidentialPardonForm(target);
 
+	Form *result = 0;
 	for (int i = 0; i < 3; i++)
 	{
-		if (formName == formNames[i])
+		if (formName == targets[i])
 		{
-			Form *newForm = (this->*(formMakers[i]))(target);
-			std::cout << "Intern creates <" << newForm->getName() << ">" << std::endl;
-			return newForm;
+			std::cout << "Intern creates " << formName << " form." << '\n';
+			result = forms[i];
+			continue;
 		}
+		delete forms[i];
 	}
-	throw InvalidFormNameException();
-}
-
-Form *Intern::makeShrubberyCreationForm(const std::string target) const
-{
-	return new ShrubberyCreationForm(target);
-}
-
-Form *Intern::makeRobotomyRequestForm(const std::string target) const
-{
-	return new RobotomyRequestForm(target);
-}
-
-Form *Intern::makePresidentialPardonForm(const std::string target) const
-{
-	return new PresidentialPardonForm(target);
+	if (result)
+		return (result);
+	else
+		throw Intern::InvalidFormNameException();
 }
 
 const char* Intern::InvalidFormNameException::what() const throw()

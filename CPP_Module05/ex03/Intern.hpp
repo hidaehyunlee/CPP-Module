@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 21:53:21 by daelee            #+#    #+#             */
-/*   Updated: 2021/04/29 21:53:22 by daelee           ###   ########.fr       */
+/*   Updated: 2021/04/30 09:53:19 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,6 @@
 
 class Intern
 {
-	Form* makeShrubberyCreationForm(const std::string target) const;
-	Form* makeRobotomyRequestForm(const std::string target) const;
-	Form* makePresidentialPardonForm(const std::string target) const;
-
 public:
 	Intern(void);
 	Intern(const Intern& other);
