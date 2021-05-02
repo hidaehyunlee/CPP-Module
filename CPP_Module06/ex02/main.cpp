@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/02 11:34:32 by daelee            #+#    #+#             */
-/*   Updated: 2021/05/02 13:30:44 by daelee           ###   ########.fr       */
+/*   Updated: 2021/05/02 13:35:18 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,35 @@ void identify_from_reference(Base &p)
 
 int main()
 {
+    std::cout << "========= Random Generate Test ==========" << std::endl;
+    
     Base *p = generate();
     
     identify_from_pointer(p);
     identify_from_reference(*p);
 
     delete p;
+
+    std::cout << "================ All Test ===============" << std::endl;
+    
+    A *a_ptr = new A;
+    A &a_ref = *a_ptr;
+    identify_from_pointer(dynamic_cast<Base *>(a_ptr));
+    identify_from_reference(dynamic_cast<Base &>(a_ref));
+    delete a_ptr;
+
+    B *b_ptr = new B;
+    B &b_ref = *b_ptr;
+    identify_from_pointer(dynamic_cast<Base *>(b_ptr));
+    identify_from_reference(dynamic_cast<Base &>(b_ref));
+    delete b_ptr;
+
+    C *c_ptr = new C;
+    C &c_ref = *c_ptr;
+    identify_from_pointer(dynamic_cast<Base *>(c_ptr));
+    identify_from_reference(dynamic_cast<Base &>(c_ref));
+    delete c_ptr;
+
 
     return 0;
 }
