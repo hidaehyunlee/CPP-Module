@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 16:15:49 by daelee            #+#    #+#             */
-/*   Updated: 2021/05/04 18:53:15 by daelee           ###   ########.fr       */
+/*   Updated: 2021/05/04 20:23:18 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,37 +15,54 @@
 
 int main(void)
 {
-	Array<int> intArr(10);
+	std::cout << "------------- default test --------------" << std::endl;
+	Array<int> intArr(10); // 크기가 10인 배열 생성
 
-	for(int i = 0; i < 10; i++)
-		std::cout << intArr[i] << " ";
+	for (unsigned i = 0; i < intArr.size(); i++)
+		std::cout << intArr[i] << " "; // []연산자 오버로딩 테스트
 
 	std::cout << std::endl;
 
-	for(int i = 0; i < 10; i++)
+	for (unsigned i = 0; i < intArr.size(); i++)
 		intArr[i] = i + 1;
 
-	for(int i = 0; i < 10; i++)
+	for (unsigned i = 0; i < intArr.size(); i++)
 		std::cout << intArr[i] << " ";
-	
-	std::cout << std::endl;
 
+	std::cout << "\n\n------------ const read test ------------" << std::endl;
+	const Array<float> constArr(5);
+
+	for (unsigned int i = 0; i < constArr.size(); i++)
+	{
+		std::cout << constArr[i] << " "; // const 배열 [] 연산자 오버로딩 테스트
+	}
+
+	std::cout << "\n\n--------------- copy test ---------------" << std::endl;
+	Array<std::string> list(2);
+
+	list[0] = "42";
+	list[1] = "seoul";
+
+	for (unsigned int i = 0; i < list.size(); i++)
+		std::cout << "list[" << i << "] = " << list[i] << std::endl;
+
+	Array<std::string> copyList(list); // 복사 생성자로 copyList 배열 생성
+
+	copyList[1] = "paris";
+
+	for (unsigned int i = 0; i < copyList.size(); i++)
+		std::cout << "copyList[" << i << "] = " << copyList[i] << std::endl;
+
+	std::cout << "\n------- nullArr and exception test ------" << std::endl;
 	try
 	{
-		std::cout << intArr[20] << std::endl;
+		Array<int> nullArr;
+		std::cout << nullArr[0];
 	}
-	catch(const std::exception& e)
+	catch (const std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
 
-	const Array<float> floatArr(5);
-
-	for (float i = 0; i < 5; i++)
-	{
-		std::cout << floatArr[i] << " ";
-	}
-	std::cout << std::endl;
-	
 	return 0;
 }

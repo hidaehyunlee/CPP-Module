@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 16:15:54 by daelee            #+#    #+#             */
-/*   Updated: 2021/05/04 18:39:36 by daelee           ###   ########.fr       */
+/*   Updated: 2021/05/04 20:15:30 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 template<typename T>
 class Array
 {
-	T* array_;
+	T *array_;
 	unsigned int size_;
 
 public:
-	Array(void) : array_(nullptr), size_(0) {};
+	Array(void) : array_(new T[0]()), size_(0) {};
 	Array(unsigned int n) : array_(new T[n]), size_(n) {};
 	Array(const Array& other)
 	{
@@ -46,7 +46,7 @@ public:
 			array_ = new T[size_];
 		}
 
-		for (int i = 0; i < size_; i++)
+		for (unsigned int i = 0; i < size_; i++)
 		{
 			array_[i] = other.array_[i];
 		}
