@@ -6,22 +6,13 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 22:31:23 by daelee            #+#    #+#             */
-/*   Updated: 2021/05/05 09:43:05 by daelee           ###   ########.fr       */
+/*   Updated: 2021/05/06 13:00:42 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <vector>
 #include "easyfind.hpp"
-
-template <typename T>
-void print(T begin, T end) {
-  while (begin != end) {
-    std::cout << "[" << *begin << "] ";
-    begin++;
-  }
-  std::cout << std::endl;
-}
 
 int main(void)
 {
@@ -32,16 +23,22 @@ int main(void)
 		vec.push_back(i);
 	}
 
-	print(vec.begin(), vec.end());
+	std::vector<int>::iterator iter = begin(vec);
+
+	while (iter != end(vec))
+	{
+		std::cout << *iter++ << " "; 
+	}
+	std::cout << std::endl;
 
 	try
 	{
 		easyfind(vec, 4);
-		std::cout << "Found!!" << std::endl;
+		std::cout << "easy find!" << std::endl;
 		easyfind(vec, 8);
-		std::cout << "Found!!" << std::endl;
+		std::cout << "easy find!" << std::endl;
 		easyfind(vec, 12);
-		std::cout << "Found!!" << std::endl;
+		std::cout << "easy find!" << std::endl;
 	}
 	catch (std::exception & e)
 	{
