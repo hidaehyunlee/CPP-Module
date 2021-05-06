@@ -6,7 +6,7 @@
 /*   By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 14:09:02 by daelee            #+#    #+#             */
-/*   Updated: 2021/05/06 14:20:28 by daelee           ###   ########.fr       */
+/*   Updated: 2021/05/06 14:27:25 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,16 @@ int main(void)
 
 	std::stack<int> s(mstack);
 	std::cout << s.size() << std::endl;
+
+    std::cout << "------ <char> MutantStack test -----" << std::endl;
+
+    MutantStack<char>	cms;
+	
+	for(char i='a'; i<='z'; i++)
+		cms.push(i);
+	for(MutantStack<char>::iterator iter=cms.begin(); iter != cms.end(); iter++)
+		std::cout << *iter << " ";
+    std::cout << std::endl;
 
 	return 0;
 }
